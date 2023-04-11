@@ -43,14 +43,7 @@ function TodoForm() {
                 </Button>
             </Form>
 
-            {items.map((item) => (
-                <TodoList
-                    name={item.name}
-                    id={item.id}
-                    description={item.description}
-                    items={items} 
-                    setItems={setItems}/>
-            ))}
+            <TodoList items={items} setItems={setItems}/>
         </>
     );
 }
