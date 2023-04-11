@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Form from 'react-bootstrap/Form';
+import { Alert, Button } from 'react-bootstrap';
+import TodoForm from './components/todo-form';
+
+// type TodoItems = {
+//   id: number;
+//   name: string;
+//   description: string;
+// };
 
 function App() {
+  // const [items, setItems] = useState<TodoItems[]>([]);
+  // const [title, setTitle] = useState('');
+  // const [description, setDescription] = useState('');
+
+  // const removeItem = (item: TodoItems) => {
+  //   const filteredItems = items.filter(x => x.id !== item.id);
+  //   setItems(filteredItems);
+  // }
+
+  // const handleSubmitForm = (event: any) => {
+  //   event.preventDefault();
+
+  //   const todoItem: TodoItems = {
+  //     id: Math.random(),
+  //     name: title,
+  //     description: description
+  //   }
+
+  //   setItems(items => [...items, todoItem]);
+  //   setTitle('');
+  //   setDescription('');
+  // }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoForm />
     </div>
   );
 }
